@@ -5,11 +5,12 @@ const {accountRouter} = require("./routes/account.route");
 const app =express();
 
 app.use (cors());
+app.use(express.json());
 
-app.use("/accounts, accountRouter")
+app.use("/accounts", accountRouter)
 
 
 
 app.listen(3001, () => {
-    console.log("server is runnning on port 3001");
+    console.log("Server is runnning on port 3001");
 });
